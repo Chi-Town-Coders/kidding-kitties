@@ -1,7 +1,7 @@
 .image {
     border: solid;
    margin-bottom: 5%;
-   position: fixed;
+   /* position: fixed; */
     
 }
 
@@ -11,5 +11,5 @@
 
 .footer {
     padding: 0.25rem;
-    position: fixed;
+    /* position: fixed; */
 }
