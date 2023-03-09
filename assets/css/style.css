@@ -1,0 +1,15 @@
+.image {
+    border: solid;
+   margin-bottom: 5%;
+   position: fixed;
+    
+}
+
+.hero {
+    text-align: center;
+}
+
+.footer {
+    padding: 0.25rem;
+    position: fixed;
+}
