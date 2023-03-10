@@ -1,8 +1,8 @@
+
 .image {
     border: solid;
-   margin: 5%;
-   /* position: fixed; */
-    
+    margin: 5%;
+   /* position: fixed; */ 
 }
 
 .hero {
@@ -11,5 +11,4 @@
 
 .footer {
     padding: 0.25rem;
-    /* position: fixed; */
 }
