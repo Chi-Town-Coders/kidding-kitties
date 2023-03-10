@@ -42,16 +42,49 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
       };
     });
   
-      catImages.forEach(function (cat) {
-        var img = document.createElement('img');
-        img.src = cat.photos;
-        var link = document.createElement('a');
-        link.href = cat.url;
-        link.appendChild(img);
-        document.body.appendChild(link);
-      });
+	catImages.forEach(function (cat) {
 
-}).catch(function (err) {
-	// Log any errors
-	console.log('something went wrong', err);
-});
+        // Creates a container for cat images, appends it to document, and gives it a class for CSS purposes.
+        var catContainer = document.createElement('div');
+        catContainer.classList.add('cat-container');
+        document.body.appendChild(catContainer);
+
+        // Sources and creates images inside the catContainers and sources them.
+        var catImage = document.createElement('img');
+        catImage.src = cat.photos;
+
+        // Appends catImages to catContainers
+        catContainer.appendChild(catImage);
+	
+		// Fetches a joke when a catImage is clicked:
+		catImage.onclick = function () {
+			fetch('https://joke.deno.dev', {
+				method: 'GET',
+			}).then(function (resp) {
+				return resp.json();
+
+			}).then(function (joke) {
+
+				console.log(joke);
+				
+
+				var jokeContainer = document.createElement('div');
+				jokeContainer.classList.add('joke-container');
+		
+				var jokeText = document.createElement('p');
+				jokeText.innerText = joke.setup + " " + joke.punchline;
+		
+				var button = document.createElement('button');
+				button.innerText = 'Adopt Me!';
+				button.onclick = function() { 
+					window.open(cat.url);
+				};
+		
+				jokeContainer.appendChild(jokeText);
+				jokeContainer.appendChild(button);
+		
+				catContainer.appendChild(jokeContainer);
+			});
+		  };
+		});
+	});
