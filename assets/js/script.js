@@ -39,24 +39,30 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
       return {
         url: animal.url,
         photos: animal.photos[0].medium
+		
+
+	
       };
     });
   
 	catImages.forEach(function (cat) {
 
-        // Creates a container for cat images, appends it to document, and gives it a class for CSS purposes.
-        var catContainer = document.createElement('div');
-        catContainer.classList.add('cat-container');
-        document.body.appendChild(catContainer);
+		        // Creates a container for cat images, appends it to document, and gives it a class for CSS purposes.
+				var catContainer = document.createElement('div');
+				var catImage = document.createElement('img');
+				
+				catImage.src = cat.photos;
+				catContainer.classList.add('cat-container');
+				document.body.appendChild(catContainer);
+		
+				// Sources and creates images inside the catContainers and sources them.
+				
+				
+		
+				// Appends catImages to catContainers
+				catContainer.appendChild(catImage);
+			
 
-        // Sources and creates images inside the catContainers and sources them.
-        var catImage = document.createElement('img');
-        catImage.src = cat.photos;
-
-        // Appends catImages to catContainers
-        catContainer.appendChild(catImage);
-	
-		// Fetches a joke when a catImage is clicked:
 		catImage.onclick = function () {
 			fetch('https://joke.deno.dev', {
 				method: 'GET',
@@ -66,7 +72,8 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
 			}).then(function (joke) {
 
 				console.log(joke);
-				
+
+		
 
 				var jokeContainer = document.createElement('div');
 				jokeContainer.classList.add('joke-container');

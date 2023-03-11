@@ -1,9 +1,4 @@
-.image {
-    border: solid;
-   margin: 5%;
-   /* position: fixed; */
-    
-}
+
 
 .hero {
     text-align: center;
@@ -11,5 +6,34 @@
 
 .footer {
     padding: 0.25rem;
+    
     /* position: fixed; */
 }
+
+.cat-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* border: solid; */
+    
+    
+    /* justify-content: space-evenly; */
+    
+
+}
+
+
+.joke-container{
+    border: double; 
+    justify-content: space-evenly;
+    width: 30%;
+    height: 30%;
+    padding: 7%;
+    
+    
+   
+
+   
+}
+
