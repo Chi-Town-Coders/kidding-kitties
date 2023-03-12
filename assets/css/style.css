@@ -1,15 +1,53 @@
-.image {
-    border: solid;
-   margin: 5%;
-   /* position: fixed; */
-    
-}
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: rgb(185, 217, 195);
+  }
 
 .hero {
     text-align: center;
 }
 
+#main-container {
+    min-height: 100%;
+  }
+
 .footer {
     padding: 0.25rem;
+    height: 50px;
+  margin-top: -50px;
     /* position: fixed; */
 }
+
+.cat-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* border: solid; */
+    
+    
+    /* justify-content: space-evenly; */
+    padding: 20px;
+  padding-bottom: 50px;
+
+}
+
+.cat-container img {
+    border: solid green 5px;
+}
+
+
+.joke-container{
+    border: double; 
+    justify-content: space-evenly;
+    width: 30%;
+    height: 30%;
+    padding: 7%;
+    
+    
+   
+
+   
+}
+

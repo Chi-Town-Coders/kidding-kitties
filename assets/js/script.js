@@ -2,6 +2,7 @@
 // Replace these with your key/secret
 var key = 'i1H9NJybBiX2WXs257QX7yUzCR0ixMDP5JdxHhOK0dX6qEcFGp';
 var secret = 'qkwXTx7MPxTxfnJhmsQnGqwmnMAAztGEpzWqWnD4';
+
 // Call the API
 // This is a POST request, because we need the API to generate a new token for us
 fetch('https://api.petfinder.com/v2/oauth2/token', {
@@ -28,63 +29,82 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
 	// Return the API response as JSON
 	return resp.json();
 }).then(function (data) {
-    // Log the pet data
+	// Log the pet data
 	console.log('pets', data);
 
-    var catImages = data.animals
-    .filter(function (animal) {
-      return animal.photos.length > 0;
-    })
-    .map(function (animal) {
-      return {
-        url: animal.url,
-        photos: animal.photos[0].medium
-      };
-    });
-  
+	var catImages = data.animals
+		.filter(function (animal) {
+			return animal.photos.length > 0;
+		})
+		.map(function (animal) {
+			return {
+				url: animal.url,
+				photos: animal.photos[0].medium
+
+
+
+			};
+		});
+
 	catImages.forEach(function (cat) {
 
-        // Creates a container for cat images, appends it to document, and gives it a class for CSS purposes.
-        var catContainer = document.createElement('div');
-        catContainer.classList.add('cat-container');
-        document.body.appendChild(catContainer);
+		// Creates a container for cat images, appends it to document, and gives it a class for CSS purposes.
+		var catContainer = document.createElement('div');
+		var catImage = document.createElement('img');
 
-        // Sources and creates images inside the catContainers and sources them.
-        var catImage = document.createElement('img');
-        catImage.src = cat.photos;
+		catImage.src = cat.photos;
+		catContainer.classList.add('cat-container');
 
-        // Appends catImages to catContainers
-        catContainer.appendChild(catImage);
-	
-		// Fetches a joke when a catImage is clicked:
-		catImage.onclick = function () {
-			fetch('https://joke.deno.dev', {
-				method: 'GET',
-			}).then(function (resp) {
-				return resp.json();
 
-			}).then(function (joke) {
+		document.querySelector("#main-container").append(catContainer);
 
-				console.log(joke);
-				
+		// Sources and creates images inside the catContainers and sources them.
 
-				var jokeContainer = document.createElement('div');
-				jokeContainer.classList.add('joke-container');
-		
-				var jokeText = document.createElement('p');
-				jokeText.innerText = joke.setup + " " + joke.punchline;
-		
-				var button = document.createElement('button');
-				button.innerText = 'Adopt Me!';
-				button.onclick = function() { 
-					window.open(cat.url);
-				};
-		
-				jokeContainer.appendChild(jokeText);
-				jokeContainer.appendChild(button);
-		
-				catContainer.appendChild(jokeContainer);
-			});
-		  };
-		});
+
+
+		// Appends catImages to catContainers
+		catContainer.appendChild(catImage);
+
+
+		catImage.onclick = function (event) {
+
+			var parentContainer = event.target.parentElement;
+			console.log(parentContainer)
+
+			var numberOfChildren = parentContainer.children.length;
+
+			console.log(numberOfChildren)
+
+			if (numberOfChildren == 1) {
+				fetch('https://joke.deno.dev', {
+					method: 'GET',
+				}).then(function (resp) {
+					return resp.json();
+
+				}).then(function (joke) {
+
+					console.log(joke);
+
+
+
+					var jokeContainer = document.createElement('div');
+					jokeContainer.classList.add('joke-container');
+
+					var jokeText = document.createElement('p');
+					jokeText.innerText = joke.setup + " " + joke.punchline;
+
+					var button = document.createElement('button');
+					button.innerText = 'Adopt Me!';
+					button.onclick = function () {
+						window.open(cat.url);
+					};
+
+					jokeContainer.appendChild(jokeText);
+					jokeContainer.appendChild(button);
+					catContainer.appendChild(jokeContainer);
+				});
+			}
+
+		};
 	});
+});
