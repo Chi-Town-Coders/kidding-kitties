@@ -1,6 +1,6 @@
-# Counsel Cat
+# Kidding Kitties
 
-# FIRST PROJECT - Counsel Cat
+# FIRST PROJECT - Kidding Kitties
 
 <STRONG> CONTRIBUTORS </STRONG>
 
