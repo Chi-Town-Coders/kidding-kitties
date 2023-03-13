@@ -19,7 +19,7 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
 	console.log('token', data);
 	// Return a second API call
 	// This one uses the token we received for authentication
-	return fetch("https://api.petfinder.com/v2/animals?type=cat", {
+	return fetch("https://api.petfinder.com/v2/animals?type=cat&limit=100", {
 		headers: {
 			'Authorization': data.token_type + ' ' + data.access_token,
 			'Content-Type': 'application/x-www-form-urlencoded'
@@ -41,8 +41,6 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
 				url: animal.url,
 				photos: animal.photos[0].medium
 
-
-
 			};
 		});
 
@@ -59,7 +57,6 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
 		document.querySelector("#main-container").append(catContainer);
 
 		// Sources and creates images inside the catContainers and sources them.
-
 
 
 		// Appends catImages to catContainers
