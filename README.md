@@ -25,9 +25,29 @@ Our team was forced to pivot early on due to API availability (or lack thereof).
 
 [COUNSEL CAT](https://chi-town-coders.github.io/counsel-cat/)
 
+
 ## ACKNOWLEDGEMENTS
+-our motivation was to practice what i learned in the bootcamp untill MAR 22 2023
+
+-the problem we experince in this project was as follows:
+
+  *Mohamed: "the problem i expereince is to make the 1 joke appear/image/click"
+  *Andres : "     "
+  *Mikaela: "   "
+  *Heather : "     "
+
+  ## usage
+the website contain HTML, CSS ,CSS Bulma library and JavaScript and has been pushed to github repostiry.
+
 
 Our team made use of the following APIs:
 
 * https://www.petfinder.com/developers/
 * https://joke.deno.dev
+
+[COUNSEL CAT](https://chi-town-coders.github.io/kidding-kitties/)
+
+<STRONG> LINK TO GITHUB REPO </strong>
+
+https://github.com/Chi-Town-Coders/kidding-kitties
+
