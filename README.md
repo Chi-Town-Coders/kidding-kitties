@@ -18,10 +18,13 @@
 
 -the problem we experince in this project was as follows:
 
-  *Mohamed: "the problem i expereince is to make the 1 joke appear/image/click"
-  *Andres : "     "
-  *Mikaela: "   "
-  *Heather : "     "
+  -Mohamed: "the problem i expereince is to make the 1 joke appear/image/click"
+  
+  -Andres : 
+  
+  -Mikaela: 
+  
+  -Heather : 
 
   ## usage
 the website contain HTML, CSS ,CSS Bulma library and JavaScript and has been pushed to github repostiry.
