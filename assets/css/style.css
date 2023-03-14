@@ -35,6 +35,8 @@ html, body {
 
 .cat-container img {
     border: solid green 5px;
+    width : 35%;
+    height: 35%;
 }
 
 
@@ -49,6 +51,10 @@ html, body {
    
 
    
+}
+
+.joke-container p {
+  font-size: x-large;
 }
 
 .joke-container button {
