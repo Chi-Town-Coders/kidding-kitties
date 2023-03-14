@@ -1,6 +1,5 @@
 html, body {
     height: 100%;
-    margin: 0;
     background-color: rgb(185, 217, 195);
   }
 
@@ -8,16 +7,10 @@ html, body {
     text-align: center;
 }
 
+
 #main-container {
     min-height: 100%;
   }
-
-.footer {
-    padding: 0.25rem;
-    height: 50px;
-  margin-top: -50px;
-    /* position: fixed; */
-}
 
 .cat-container {
 
@@ -29,7 +22,7 @@ html, body {
     
     /* justify-content: space-evenly; */
     padding: 20px;
-  padding-bottom: 50px;
+    padding-bottom: 50px;
 
 }
 
@@ -46,10 +39,6 @@ html, body {
     width: 30%;
     height: 30%;
     padding: 7%;
-    
-    
-   
-
    
 }
 
@@ -64,6 +53,13 @@ html, body {
 
 .joke-container button:hover {
   color: rgb(201, 243, 14);
+}
+
+.footer {
+  padding: 0.25rem;
+  height: 50px;
+  margin-top: -50px;
+  /* position: fixed; */
 }
 
 @media (min-width: 390px) {
