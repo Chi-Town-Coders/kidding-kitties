@@ -105,3 +105,10 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
 		};
 	});
 });
+
+localStorage.setItem(cat.url, JSON.stringify(cat));
+
+for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    var value = JSON.parse(localStorage.getItem(key));
+  }
