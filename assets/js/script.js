@@ -94,6 +94,10 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
 					button.innerText = 'Adopt Me!';
 					button.onclick = function () {
 						window.open(cat.url);
+						console.log(cat.url);
+						localStorage.setItem(joke.setup,cat.url);
+						console.log(localStorage.getItem(joke.setup))
+						document.querySelector(".cat-container img").style.border = "solid blue 5px" 
 					};
 
 					jokeContainer.appendChild(jokeText);
@@ -105,10 +109,3 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
 		};
 	});
 });
-
-localStorage.setItem(cat.url, JSON.stringify(cat));
-
-for (var i = 0; i < localStorage.length; i++) {
-    var key = localStorage.key(i);
-    var value = JSON.parse(localStorage.getItem(key));
-  }
