@@ -14,10 +14,10 @@ This webapp was conceived to fulfill requirements for our team's first coding bo
 Our team was forced to pivot early on due to API availability (or lack thereof). We learned that on a short (2-week) timeline, it would be essential to choose APIs that would not require extensive wait times for key approval, but also featured robust enough hosting to handle our requests.
 
 ## DEMO
-![alt text](link)
+![alt text](https://raw.githubusercontent.com/Chi-Town-Coders/kidding-kitties/main/assets/Images/Screen%20Shot%202023-03-14%20at%203.02.53%20PM.png)
 
 ## LINK TO DEPLOYED SITE
-[COUNSEL CAT](https://chi-town-coders.github.io/counsel-cat/)
+[KIDDING KITTIES](https://chi-town-coders.github.io/kidding-kitties/)
 
 -the problem we experince in this project was as follows:
 
